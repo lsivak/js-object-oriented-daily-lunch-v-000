@@ -25,7 +25,7 @@ class Neighborhood {
 
     meals() {
         return this.neighborhoods().map(neighborhood => {
-          return neighborhood.meal
+          return neighborhood.meal.uniq
         })
       }
 }
