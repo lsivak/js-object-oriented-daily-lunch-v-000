@@ -24,7 +24,7 @@ class Neighborhood {
     }
 
     meals() {
-        return meals.deliveries.uniq
+        return meals.deliveries
         })
       }
 }
