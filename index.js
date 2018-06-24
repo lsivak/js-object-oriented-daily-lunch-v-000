@@ -18,8 +18,8 @@ class Neighborhood {
   //   })
   // }
   customers() {
-      return this.customers().map(customers => {
-        return.customer.neighborhoodId === this.id
+      return this.neighborhood().map(neighborhood => {
+        return customer.neighborhoodId === this.id
       })
     }
 }
