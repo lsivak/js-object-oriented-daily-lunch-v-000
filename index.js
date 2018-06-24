@@ -1,10 +1,10 @@
 // global datastore
 let store = { neighborhoods: [], meals: [], customers: [], deliveries: [] };
 let neighborhoodId = 0
-// let customerId = 0
-// let mealId = 0
-// let deliveryId = 0
-//
+let customerId = 0
+let mealId = 0
+let deliveryId = 0
+
 class Neighborhood {
   constructor(name) {
     this.name = name
@@ -12,37 +12,36 @@ class Neighborhood {
     store.neighborhoods.push(this)
   }
 
-  deliveries() {
-    return store.deliveries.filter(delivery => {
-      return.delivery.neighborhoodId === this.id
-    })
+  // deliveries() {
+  //   return store.deliveries.filter(delivery => {
+  //     return.delivery.neighborhoodId === this.id
+  //   })
+  // }
+  // customers() {
+  //   return store.deliveries().map(delivery => {
+  //     return.delivery.customer()
+  //   })
+  // }
+}
+
+class Customer {
+  constructor(name, neighborhood) {
+    this.name = name
+    this.neighborhoodId = neighborhood.id
+    this.id = customerId++
+    store.customers.push(this)
   }
 }
-//   customers() {
-//     return store.deliveries().map(delivery => {
-//       return.delivery.customer()
-//     })
-//   }
-// }
-//
-// class Customer {
-//   constructor(name, neighborhood) {
-//     this.name = name
-//     this.neighborhoodId = neighborhood.id
-//     this.id = customerId++
-//     store.customers.push(this)
-//   }
-// }
-//
-// class Meal {
-//   constructor(title, price) {
-//     this.title = title
-//     this.price = price
-//     this.id = mealId++
-//     store.meals.push(this)
-//   }
-// }
-//
+
+class Meal {
+  constructor(title, price) {
+    this.title = title
+    this.price = price
+    this.id = mealId++
+    store.meals.push(this)
+  }
+}
+
 class Delivery {
   constructor(mealId, neighborhoodId, customerId) {
     this.mealId = meal.id
