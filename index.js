@@ -15,12 +15,12 @@ class Neighborhood {
   deliveries() {
     return store.deliveries().map(delivery => {
       return delivery.neighborhoodId === this.id
-    })
+    }).uniq
   }
   customers() {
       return this.neighborhood().map(neighborhood => {
         return customer.neighborhoodId === this.id
-      }).uniq
+      })
     }
 }
 
