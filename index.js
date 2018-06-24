@@ -24,10 +24,10 @@ class Neighborhood {
     }
 
     meals() {
-        return store.neighborhoods().map(neighborhood => {
-          return meal.neighborhoodId === this.id
+        return this.neighborhoods().map(neighborhood => {
+          return neighborhood.meal
         })
-      }  
+      }
 }
 
 class Customer {
