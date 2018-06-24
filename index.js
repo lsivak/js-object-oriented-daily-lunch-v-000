@@ -18,10 +18,10 @@ class Neighborhood {
   //   })
   // }
   customers() {
-    return store.deliveries().map(delivery => {
-      return.delivery.customer()
-    })
-  }
+      return store.customers.filter(customer => {
+        return.return.neighborhoodId === this.id
+      })
+    }
 }
 
 class Customer {
