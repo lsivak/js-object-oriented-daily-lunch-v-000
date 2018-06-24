@@ -43,12 +43,12 @@ class Neighborhood {
 //   }
 // }
 //
-// class Delivery {
-//   constructor(mealId, neighborhoodId, customerId) {
-//     this.mealId = meal.id
-//     this.neighborhoodId = neighborhood.id
-//     this.customerId = customer.id
-//     this.id = deliveryId++
-//     store.delivery.push(this)
-//   }
-// }
+class Delivery {
+  constructor(mealId, neighborhoodId, customerId) {
+    this.mealId = meal.id
+    this.neighborhoodId = neighborhood.id
+    this.customerId = customer.id
+    this.id = deliveryId++
+    store.delivery.push(this)
+  }
+}
