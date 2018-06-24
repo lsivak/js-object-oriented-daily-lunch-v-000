@@ -18,7 +18,7 @@ class Neighborhood {
   //   })
   // }
   customers() {
-      return store.customers.find(customer => {
+      return store.customers.find(neighborhoodId => {
         return.neighborhoodId === this.id
       })
     }
