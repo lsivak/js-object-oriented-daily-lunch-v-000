@@ -12,11 +12,11 @@ class Neighborhood {
     store.neighborhoods.push(this)
   }
 }
-//   deliveries() {
-//     return store.deliveries.filter(delivery => {
-//       return.delivery.neighborhoodId === this.id
-//     })
-//   }
+  deliveries() {
+    return store.deliveries.filter(delivery => {
+      return.delivery.neighborhoodId === this.id
+    })
+  }
 //   customers() {
 //     return store.deliveries().map(delivery => {
 //       return.delivery.customer()
