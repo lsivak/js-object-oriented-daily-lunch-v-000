@@ -13,9 +13,9 @@ class Neighborhood {
   }
 
   deliveries() {
-    return store.deliveries().map(delivery.uniq => {
+    return store.deliveries().map(delivery => {
       return delivery.neighborhoodId === this.id
-    })
+    }).uniq
   }
   customers() {
       return store.neighborhoods().map(neighborhood => {
