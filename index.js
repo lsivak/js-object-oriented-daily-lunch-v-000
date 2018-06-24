@@ -18,8 +18,8 @@ class Neighborhood {
   //   })
   // }
   customers() {
-      return store.customers.filter(customer => {
-        return.return.neighborhoodId === this.id
+      return store.customers.find(customer => {
+        return.neighborhoodId === this.id
       })
     }
 }
