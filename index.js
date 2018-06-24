@@ -24,7 +24,7 @@ class Neighborhood {
     }
 
     meals() {
-        return this.neighborhoods().map(neighborhood => {
+        return store().map(neighborhood => {
           return neighborhood.meal.uniq
         })
       }
@@ -56,4 +56,10 @@ class Delivery {
     this.id = deliveryId++
     store.delivery.push(this)
   }
+
+    meal () {
+      return store.deliveries.filter(delivery => {
+        return delivery.mealId === this.id
+      })
+    }
 }
