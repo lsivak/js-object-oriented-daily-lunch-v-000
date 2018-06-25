@@ -23,12 +23,14 @@ class Neighborhood {
       return store.neighborhoods().map(neighborhood => {
         return customer.neighborhoodId === this.id
       })
+      debugger
     }
 
     meals() {
         return this.customers().map(customer => {
           return customer.meals
         })
+        debugger
       }
 }
 
