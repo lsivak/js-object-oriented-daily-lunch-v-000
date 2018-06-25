@@ -26,11 +26,10 @@ class Neighborhood {
     }
 
     meals() {
-        return this.customers().map(customer => {
-          return customer.meal
-        })
-        debugger
-      }
+     const allMeals = this.customers().map(customer => customer.meals());
+     const merged = [].concat.apply([], allMeals);
+     return [...new Set(merged)];
+   }
 }
 
 class Customer {
