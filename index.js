@@ -5,7 +5,8 @@ let customerId = 0
 let mealId = 0
 let deliveryId = 0
 
-class Neighborhood {
+const Neighborhood = (() => {
+return class Neighborhood {
   constructor(name) {
     this.name = name
     this.id = neighborhoodId++
@@ -14,7 +15,6 @@ class Neighborhood {
 
   deliveries() {
     return store.deliveries().map(delivery => {
-      debugger
       return delivery.neighborhoodId === this.id
         return delivery
     })
@@ -28,12 +28,12 @@ class Neighborhood {
 
     meals() {
         return this.customers().map(customer => {
-          return customer.meals
+          return customer.meal
         })
         debugger
       }
 }
-
+)()
 class Customer {
   constructor(name, neighborhood) {
     this.name = name
