@@ -15,6 +15,7 @@ class Neighborhood {
   deliveries() {
     return store.deliveries().map(delivery => {
       return delivery.neighborhoodId === this.id
+        return delivery
     })
   }
   customers() {
