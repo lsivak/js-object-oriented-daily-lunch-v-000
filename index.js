@@ -51,7 +51,7 @@ class Meal {
 }
 
 class Delivery {
-  constructor(meal, neighborhoodId, customerId) {
+  constructor(meal, neighborhood, customerId) {
     this.mealId = meal.id
     this.neighborhoodId = neighborhood.id
     this.customerId = customer.id
