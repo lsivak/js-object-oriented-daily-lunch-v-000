@@ -18,18 +18,18 @@ class Neighborhood {
         return delivery
     })
   }
+  meals() {
+      return this.customers().map(customer => {
+        return customer.meal
+      })
+      debugger
+    }
   customers() {
       return store.neighborhoods().map(neighborhood => {
         return customer.neighborhoodId === this.id
       })
       debugger
     }
-
-    meals() {
-     const allMeals = this.customers().map(customer => customer.meals());
-     const merged = [].concat.apply([], allMeals);
-     return [...new Set(merged)];
-   }
 }
 
 class Customer {
