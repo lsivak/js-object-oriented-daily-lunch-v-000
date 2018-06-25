@@ -13,7 +13,7 @@ class Neighborhood {
   }
 
   deliveries() {
-    return store.deliveries().filter(delivery => {
+    return store.deliveries.filter(delivery => {
       return delivery.neighborhoodId === this.id
         return delivery
     })
@@ -25,7 +25,7 @@ class Neighborhood {
       debugger
     }
   customers() {
-      return store.neighborhoods().map(neighborhood => {
+      return store.customers.filter(customer => {
         return customer.neighborhoodId === this.id
       })
       debugger
