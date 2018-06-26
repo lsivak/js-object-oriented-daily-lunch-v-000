@@ -49,6 +49,9 @@ class Customer {
   meal() {
     return store.meals.find(meal => meal.id === this.mealId)
   }
+  byPrice() {
+    
+  }
 }
 
 class Meal {
