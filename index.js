@@ -5,6 +5,7 @@ let customerId = 0
 let mealId = 0
 let deliveryId = 0
 
+const Neighborhood = (() =>{
 class Neighborhood {
   constructor(name) {
     this.name = name
@@ -31,6 +32,7 @@ class Neighborhood {
       debugger
     }
 }
+})
 
 class Customer {
   constructor(name, neighborhoodId) {
