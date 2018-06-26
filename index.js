@@ -51,11 +51,11 @@ class Customer {
       return meal.id === this.mealId
   })
 
-  byPrice() {
-    return this.meals().reduce((total, meal) => {
-      return (total += meal.price), 0)
-    )}
-}
+//   byPrice() {
+//     return this.meals().reduce((total, meal) => {
+//       return (total += meal.price), 0)
+//     )}
+// }
 
 class Meal {
   constructor(title, price) {
