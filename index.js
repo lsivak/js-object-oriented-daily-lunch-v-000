@@ -27,8 +27,7 @@ class Neighborhood {
 
       deliveries() {
         return store.deliveries.filter(delivery => {
-          return delivery.neighborhoodId === this.id
-            return delivery
+          return delivery.mealId === this.id
         })
       }
   }
@@ -39,6 +38,13 @@ class Customer {
     this.neighborhoodId = neighborhoodId
     this.id = customerId++
     store.customers.push(this)
+  }
+
+  deliveries() {
+    return store.deliveries.filter(delivery => {
+      return delivery.neighborhoodId === this.id
+        return delivery
+    })
   }
 }
 
