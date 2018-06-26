@@ -50,7 +50,7 @@ class Customer {
     return store.meals.find(meal => meal.id === this.mealId)
   }
   byPrice() {
-    returns this.meals().reduce((total, meal) => (total += meal.price), 0)
+    return this.meals().reduce((total, meal) => (total += meal.price), 0)
   }
 }
 
