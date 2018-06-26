@@ -19,14 +19,16 @@ class Neighborhood {
         return delivery
     })
   }
-  meals() {
-      return this.customers().map(customer => {
-        return customer.meal
-      })
-    }
+
   customers() {
       return store.customers.filter(customer => {
         return customer.neighborhoodId === this.id
+      })
+    }
+    
+  meals() {
+      return this.customers().map(customer => {
+        return customer.meal
       })
     }
   }
