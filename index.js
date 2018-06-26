@@ -6,7 +6,7 @@ let mealId = 0
 let deliveryId = 0
 
 const Neighborhood = (() => {
-class Neighborhood {
+return class {
   constructor(name) {
     this.name = name
     this.id = neighborhoodId++
