@@ -46,11 +46,11 @@ class Customer {
 
     })
   }
-  meals() {
-    return.this.deliveries().map(delivery => {
-      delivery.meal
-    })
-}
+//   meals() {
+//     return.this.deliveries().map(delivery => {
+//       delivery.meal
+//     })
+// }
 
 class Meal {
   constructor(title, price) {
