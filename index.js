@@ -23,16 +23,13 @@ class Neighborhood {
       return this.customers().map(customer => {
         return customer.meal
       })
-      debugger
     }
   customers() {
       return store.customers.filter(customer => {
         return customer.neighborhoodId === this.id
       })
-      debugger
     }
-}
-})
+
 class Customer {
   constructor(name, neighborhoodId) {
     this.name = name
