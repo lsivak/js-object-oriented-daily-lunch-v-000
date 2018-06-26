@@ -46,9 +46,9 @@ class Customer {
 
     })
   }
-  // meals() {
-  //   return store.meals.find(meal => meal.id === this.mealId)
-  // }
+  meals() {
+    return store.meals.find(meal => meal.id === this.mealId)
+  }
   // byPrice() {
   //   returns this.meals().reduce((total, meal) => (total += meal.price), 0)
   // }
