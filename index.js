@@ -5,7 +5,7 @@ let customerId = 0
 let mealId = 0
 let deliveryId = 0
 
-const Neighborhood = (() => {
+let Neighborhood = (() => {
 return class Neighborhood {
   constructor(name) {
     this.name = name
