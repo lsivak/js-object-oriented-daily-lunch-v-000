@@ -66,7 +66,7 @@ class Delivery {
     store.delivery.push(this)
   }
 
-    // meal () {
-    //   return store.meals.find(meal => meal.id === this.mealId)
-    // }
+    meal () {
+      return store.meals.find(meal => meal.id === this.mealId)
+    }
 }
