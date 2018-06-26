@@ -40,12 +40,12 @@ class Customer {
     store.customers.push(this)
   }
 
-  deliveries() {
-    return store.deliveries.filter(delivery => {
-      return delivery.customerId === this.id
-
-    })
-  }
+  // deliveries() {
+  //   return store.deliveries.filter(delivery => {
+  //     return delivery.customerId === this.id
+  // 
+  //   })
+  // }
 //   meals() {
 //     return.this.deliveries().map(delivery => {
 //       delivery.meal
