@@ -40,22 +40,20 @@ class Customer {
     store.customers.push(this)
   }
 
-  // deliveries() {
-  //   return store.deliveries.filter(delivery => {
-  //     return delivery.customerId === this.id
-  // 
-  //   })
-  // }
-  // meals() {
-  //   return store.meals.find(meal => {
-  //     return meal.id === this.mealId
-  // })
+  deliveries() {
+    return store.deliveries.filter(delivery => {
+      return delivery.customerId === this.id
 
-//   byPrice() {
-//     return this.meals().reduce((total, meal) => {
-//       return (total += meal.price), 0)
-//     )}
-// }
+    })
+  }
+  meals() {
+    return store.meals.find(meal => {
+      return meal.id === this.mealId
+  })
+  byPrice() {
+    return this.meals().reduce((total, meal) => (total += meal.price), 0)
+  }
+}
 
 class Meal {
   constructor(title, price) {
