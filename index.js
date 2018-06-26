@@ -40,17 +40,17 @@ class Customer {
     store.customers.push(this)
   }
 
-  // deliveries() {
-  //   return store.deliveries.filter(delivery => {
-  //     return delivery.customerId === this.id
-  // 
-  //   })
-  // }
-//   meals() {
-//     return.this.deliveries().map(delivery => {
-//       delivery.meal
-//     })
-// }
+  deliveries() {
+    return store.deliveries.filter(delivery => {
+      return delivery.customerId === this.id
+
+    })
+  }
+  meals() {
+    return.this.customers().map(delivery => {
+      return delivery.meal
+    })
+}
 
 class Meal {
   constructor(title, price) {
