@@ -31,6 +31,7 @@ class Neighborhood {
             return delivery
         })
       }
+      return neighborhood
   }
 
 class Customer {
