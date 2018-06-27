@@ -25,11 +25,12 @@ class Neighborhood {
       })
     }
 
-    deliveries() {
-       return store.deliveries.filter(delivery => delivery.neighborhoodId === this.id);
-     }
-   };
- })();
+      deliveries() {
+        return store.deliveries.filter(delivery => {
+          return delivery.neighborhoodId === this.id
+        })
+      }
+  }
 
 class Customer {
   constructor(name, neighborhoodId) {
