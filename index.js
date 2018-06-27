@@ -42,6 +42,7 @@ class Customer {
   }
 
   deliveries() {
+    debugger
     return store.deliveries.filter(delivery => {
       return delivery.customerId === this.id
 
