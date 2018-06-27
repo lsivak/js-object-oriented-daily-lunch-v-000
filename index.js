@@ -29,6 +29,7 @@ class Neighborhood {
         return store.deliveries.filter(delivery => {
           return delivery.neighborhoodId === this.id
         })
+        debugger
       }
   }
 
