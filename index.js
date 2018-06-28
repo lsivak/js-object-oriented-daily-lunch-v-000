@@ -72,7 +72,7 @@ class Meal {
         return customer.mealId === this.id.uniq
       })
     }
-   byPrice() {
+  static byPrice() {
     return store.meals.sort((a, b) => a.price < b.price)
 
   }
