@@ -21,7 +21,7 @@ class Neighborhood {
 
   meals() {
       return this.customers.filter(customer => {
-        return customer.meals().uniq
+        return customer.meals.uniq
       })
     }
 
