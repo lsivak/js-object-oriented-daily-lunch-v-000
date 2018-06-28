@@ -55,29 +55,30 @@ class Customer {
   }
 }
 
-class Meal {
-  constructor(title, price) {
-    this.title = title
-    this.price = price
-    this.id = mealId++
-    store.meals.push(this)
-  }
-  deliveries() {
-    return store.deliveries.filter(delivery => {
-      return delivery.mealId === this.id
-    })
-  }
-  customers() {
-      return store.customers.filter(customer => {
-        return customer.mealId === this.id
-      })
+const Meal = (() => {
+  let mealIds = 1;
+  return class {
+    constructor(title, price = 0) {
+      this.id = mealIds++;
+      this.title = title;
+      this.price = price;
+      store.meals.push(this);
     }
-  byPrice() {
-    return store.meals.sort((a, b) => a.price < b.price)
-      return meal.price.desc
-    
-  }
-}
+
+    deliveries() {
+      return store.deliveries.filter(delivery => delivery.mealId === this.id);
+    }
+
+    customers() {
+      const allCustomers = this.deliveries().map(delivery => delivery.customer());
+      return [...new Set(allCustomers)];
+    }
+
+    static byPrice() {
+      return store.meals.sort((a, b) => a.price < b.price);
+    }
+  };
+})();
 class Delivery {
   constructor(mealId, neighborhoodId, customerId) {
     this.mealId = mealId
