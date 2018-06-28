@@ -51,7 +51,9 @@ class Customer {
     return store.meals.find(meal => meal.id === this.mealId)
   }
   byPrice() {
-    return this.meals().reduce((total, meal) => (total += meal.price), 0)
+    return this.meals().sum((a, b) => {
+      return a + b)
+    }
   }
 }
 
