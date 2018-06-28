@@ -20,7 +20,7 @@ class Neighborhood {
     }
 
     meals() {
-      const allMeals = return store.deliveries.filter(delivery => {
+      return store.deliveries.filter(delivery => {
         return delivery.neighborhoodId === this.id;
       })
 
