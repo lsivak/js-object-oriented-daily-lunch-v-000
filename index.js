@@ -48,10 +48,8 @@ class Customer {
     })
   }
   meals() {
-        return store.customers.filter(customer => {
-          return customer.mealId.uniq === this.id
-        })
-      }
+    return store.meals.find(meal => meal.id === this.mealId)
+  }
   byPrice() {
     return this.meals().reduce((total, meal) => (total += meal.price), 0)
   }
