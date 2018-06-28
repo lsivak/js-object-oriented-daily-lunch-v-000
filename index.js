@@ -21,7 +21,7 @@ class Neighborhood {
 
   meals() {
       return this.meals().map(meal => {
-        return customer.meals()
+        return customer.meals
       })
     }
 
