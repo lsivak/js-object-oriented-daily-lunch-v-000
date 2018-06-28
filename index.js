@@ -84,7 +84,7 @@ class Delivery {
     this.neighborhoodId = neighborhoodId
     this.customerId = customerId
     this.id = deliveryId++
-    store.delivery.push(this)
+    store.deliveries.push(this)
   }
 
     meal() {
