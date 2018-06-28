@@ -67,7 +67,7 @@ class Meal {
       return delivery.mealId === this.id
     })
   }
-
+}
 class Delivery {
   constructor(mealId, neighborhoodId, customerId) {
     this.mealId = mealId
