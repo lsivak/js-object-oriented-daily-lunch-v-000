@@ -78,27 +78,26 @@ class Meal {
 
   }
 }
-const Delivery = (() => {
-  let deliveryIds = 1;
-  return class {
-    constructor(mealId, neighborhoodId, customerId) {
-      this.id = deliveryIds++;
-      this.mealId = mealId;
-      this.neighborhoodId = neighborhoodId;
-      this.customerId = customerId;
-      store.deliveries.push(this);
-    }
+class Delivery {
+  constructor(mealId, neighborhoodId, customerId) {
+    this.mealId = mealId
+    this.neighborhoodId = neighborhoodId
+    this.customerId = customerId
+    this.id = deliveryId++
+    store.delivery.push(this)
+  }
 
     meal() {
-      return store.meals.find(meal => meal.id === this.mealId);
+      return store.meals.find(meal => meal.id === this.mealId)
     }
 
     neighborhood() {
-      return store.neighborhoods.find(neighborhood => neighborhood.id === this.neighborhoodId);
+      return store.neighborhood.find(neighborhood => neighborhood.id === this.neighborhoodId)
     }
 
     customer() {
-      return store.customers.find(customer => customer.id === this.customerId);
+      return store.customers.find(customer => customer.id === this.customerId)
     }
-  };
-})();
+
+    
+}
