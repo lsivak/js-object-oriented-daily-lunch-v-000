@@ -20,7 +20,8 @@ class Neighborhood {
     }
 
     meals() {
-      return this.deliveries().map(delivery => delivery.meal()).map(delivery => delivery.meal())
+      allMeals = this.deliveries().map(delivery => delivery.meal())
+      return AllMeals.map(uniq)
         
       }
     }
