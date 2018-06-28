@@ -19,10 +19,8 @@ class Neighborhood {
       })
     }
 
-  meals() {
-      return this.customers.map(customer => {
-        return customer.meals.uniq
-      })
+    meals() {
+      return this.deliveries().map(delivery => delivery.meal())
     }
 
       deliveries() {
