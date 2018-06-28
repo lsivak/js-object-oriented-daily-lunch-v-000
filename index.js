@@ -49,7 +49,7 @@ class Customer {
   }
   meals() {
         return store.customers.filter(customer => {
-          return customer.mealId === this.id.uniq
+          return customer.mealId === meal.id.uniq
         })
       }
   byPrice() {
