@@ -20,8 +20,7 @@ class Neighborhood {
     }
 
     meals() {
-      return store.meals.filter(meal => {
-        return neighborhood.mealId === mealId
+      allMeals = return this.meals.map(meal => neighborhood.meals())
 
     }
 
