@@ -74,6 +74,7 @@ class Meal {
     }
   byPrice() {
     return store.meals.sort((a, b) => a.price < b.price)
+    return meal.price.desc
   }
 }
 class Delivery {
