@@ -21,7 +21,7 @@ class Neighborhood {
 
     meals() {
       return this.deliveries().map(delivery => delivery.mealId.uniq)
-    
+
     }
 
       deliveries() {
