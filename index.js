@@ -52,7 +52,7 @@ class Customer {
   }
   byPrice() {
     return this.meals().sum((a, b) => {
-      return a + b)
+      return a.meal.price + b.meal.price)
     }
   }
 }
