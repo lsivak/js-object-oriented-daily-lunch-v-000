@@ -29,9 +29,7 @@ class Neighborhood {
         return store.deliveries.filter(delivery => {
           return delivery.neighborhoodId === this.id;
         })
-        debugger
       }
-  }
 
 class Customer {
   constructor(name, neighborhoodId) {
@@ -50,8 +48,9 @@ class Customer {
   meals() {
     return this.deliveries().map(delivery => delivery.meal())
   }
-  byPrice() {
-    return this.meals().reduce((total, meal) => (total += meal.price), 0)
+
+  totalSpent() {
+    return store.meals.reduce((total, price) => (total += meal.price), 0)
   }
 }
 
@@ -74,8 +73,6 @@ class Meal {
     }
   byPrice() {
     return store.meals.sort((a, b) => a.price < b.price)
-
-
   }
 }
 class Delivery {
