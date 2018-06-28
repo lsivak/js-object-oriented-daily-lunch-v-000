@@ -21,7 +21,7 @@ class Neighborhood {
 
     meals() {
       return store.deliveries.filter(delivery => {
-        return delivery.neighborhoodId === this.id;
+        return delivery.neighborhoodId === this.id.uniq;
       })
 
     }
