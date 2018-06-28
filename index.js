@@ -73,10 +73,10 @@ class Meal {
       })
     }
   byPrice() {
-    return store.meals.filter(meals => {
+    return store.meals.sort((a, b) => a.price < b.price)
       return meal.price.desc
     })
-  }  
+  }
 }
 class Delivery {
   constructor(mealId, neighborhoodId, customerId) {
