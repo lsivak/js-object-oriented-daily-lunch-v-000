@@ -20,7 +20,7 @@ class Neighborhood {
     }
 
   meals() {
-      return this.meals().filter(meal => {
+      return this.customers().filter(customer => {
         return customer.meal().uniq
       })
     }
