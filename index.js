@@ -20,7 +20,7 @@ class Neighborhood {
     }
 
   meals() {
-      return this.meals().map(meal => {
+      return store.meals().map(meal => {
         return customer.meals().uniq
       })
     }
