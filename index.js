@@ -1,9 +1,9 @@
 // global datastore
 let store = { neighborhoods: [], meals: [], customers: [], deliveries: [] };
-let neighborhoodId = 1
-let customerId = 1
-let mealId = 1
-let deliveryId = 1
+let neighborhoodId = 0
+let customerId = 0
+let mealId = 0
+let deliveryId = 0
 
 
 class Neighborhood {
@@ -74,7 +74,7 @@ class Meal {
     }
   byPrice() {
     return store.meals.sort((a, b) => a.price < b.price)
-      
+
 
   }
 }
