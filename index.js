@@ -42,7 +42,6 @@ class Customer {
   }
 
   deliveries() {
-    debugger
     return store.deliveries.filter(delivery => {
       return delivery.customerId === this.id
 
@@ -63,7 +62,11 @@ class Meal {
     this.id = mealId++
     store.meals.push(this)
   }
-}
+  deliveries() {
+    return store.deliveries.filter(delivery => {
+      return delivery.mealId === this.id
+    })
+  }
 
 class Delivery {
   constructor(mealId, neighborhoodId, customerId) {
