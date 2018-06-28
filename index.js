@@ -72,6 +72,11 @@ class Meal {
         return customer.mealId === this.id
       })
     }
+  byPrice() {
+    return store.meals.filter(meals => {
+      return meal.price.desc
+    })
+  }  
 }
 class Delivery {
   constructor(mealId, neighborhoodId, customerId) {
