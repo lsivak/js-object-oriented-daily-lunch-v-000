@@ -21,7 +21,7 @@ class Neighborhood {
 
     meals() {
       const allMeals = this.customers().map(customer => customer.meals())
-      const meal = -.uniq(allMeals, meal)
+      const meal = _.uniq(allMeals, meal)
     }
 
       deliveries() {
