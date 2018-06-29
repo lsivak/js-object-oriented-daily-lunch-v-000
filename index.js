@@ -20,7 +20,7 @@ class Neighborhood {
     }
 
     meals() {
-      const allMeals = store.customers().map(customer => customer.meals())
+      const allMeals = this.customers().map(customer => customer.meals())
       return allMeals
     }
 
