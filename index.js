@@ -20,7 +20,7 @@ class Neighborhood {
     }
 
     meals() {
-      return this.deliveries().map(meals => neighborhood.meals())
+      return this.deliveries().map(meals =>meals())
 
 
     }
