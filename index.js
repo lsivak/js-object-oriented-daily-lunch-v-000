@@ -22,9 +22,9 @@ class Neighborhood {
     meals() {
       const allMeals = {
         return this.deliveries().map(delivery => delivery.meal())
-        return allMeals.uniq
+    
 }
-      
+
     }
 
       deliveries() {
