@@ -21,7 +21,8 @@ class Neighborhood {
 
     meals() {
       const allMeals = this.customers().map(customer => customer.meals())
-      const meal = allMeals.reduce
+      const meal = allMeals.reduce(meals())
+      return meal
     }
 
       deliveries() {
