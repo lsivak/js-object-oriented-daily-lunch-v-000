@@ -20,8 +20,12 @@ class Neighborhood {
     }
 
     meals() {
-      return this.deliveries().map(delivery => delivery.mealId)
-    }
+      const allMeals = this.deliveries().map(delivery => delivery.mealId)
+      return allMeals.sort().filter(function(item, pos, ary) {
+          return !pos || item != ary[pos - 1];
+      })
+  }
+}
 
       deliveries() {
         return store.deliveries.filter(delivery => {
