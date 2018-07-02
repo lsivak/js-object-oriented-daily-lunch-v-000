@@ -21,7 +21,7 @@ class Neighborhood {
 
     meals() {
       const allMeals = this.deliveries().map(delivery => delivery.mealId)
-      return allMeals.sort().filter(function(item, pos, ary) {
+      return allMeals.filter(function(item, pos, ary) {
           return !pos || item != ary[pos - 1];
       })
   }
