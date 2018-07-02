@@ -20,7 +20,7 @@ class Neighborhood {
     }
 
     meals() {
-      return should.notEqual(this.deliveries().map(delivery => delivery.mealId))
+      return notEqual(this.deliveries().map(delivery => delivery.mealId))
     }
 
       deliveries() {
