@@ -20,9 +20,7 @@ class Neighborhood {
     }
 
     meals() {
-      return this.deliveries().map(delivery => delivery.mealId)
-
-
+      console.log (this.deliveries().map(delivery => delivery.mealId))
     }
 
       deliveries() {
