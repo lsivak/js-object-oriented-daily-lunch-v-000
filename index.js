@@ -22,7 +22,7 @@ class Neighborhood {
     meals() {
       const allMeals = this.deliveries().map(delivery => delivery.mealId)
       // return allMeals.reduce(function(a,b){if(a.indexOf(b)<0)a.push(b);return a;},[]);
-      return _.uniq(allMeals)
+      return .uniq(allMeals)
     }
 
       deliveries() {
