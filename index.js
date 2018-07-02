@@ -21,8 +21,8 @@ class Neighborhood {
 
     meals() {
       const allMeals = this.deliveries().map(delivery => delivery.mealId)
-      const meals = a.filter(function(allMeals, pos) {
-        return a.indexOf(allMeals) == pos
+      const meals = allMeals.filter(function(item, pos) {
+        return allMeals.indexOf(item) == pos
       })
     }
 
